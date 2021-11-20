@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { ClubPath, IconPath } from '../../../lib/staticPathData';
 
 const Navbar = styled.nav`
+  display: flex;
+  align-items: center;
   width: 100%;
+  height: 4rem;
   background-color: #ffffff;
 `;
 
@@ -23,13 +26,17 @@ const Title = styled.h4`
 const RedirectIcon = styled.img.attrs({
   src: IconPath.redirect,
 })`
-  padding-left: 0.5rem;
+  padding: 0 1rem 0 0.5rem;
 `;
 
 const ClubImg = styled.img`
   width: 2rem;
   height: 2rem;
   padding: 0.75rem;
+  transition: all 0.2s linear;
+  &:hover {
+    transform: scale(1.4);
+  }
 `;
 
 const ClubNavbar = () => {
@@ -40,7 +47,9 @@ const ClubNavbar = () => {
           <Title>FAVOURITE CLUB SITES</Title>
           <RedirectIcon />
           {ClubPath.map((club) => (
-            <ClubImg src={club.img} />
+            <a href={club.link} target='_blank'>
+              <ClubImg src={club.img} />
+            </a>
           ))}
         </ContentWrapper>
       </Navbar>
