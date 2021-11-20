@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IconPath } from '../../../lib/data';
+import { IconPath } from '../../../lib/staticPathData';
 
 const Navbar = styled.nav`
   display: flex;

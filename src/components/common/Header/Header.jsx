@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LogoPath } from '../../../lib/data';
+import { LogoPath } from '../../../lib/staticPathData';
 import ClubNavbar from './ClubNavbar';
 import MenuNavbar from './MenuNavbar';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ClubPath, IconPath } from '../../../lib/data';
+import { ClubPath, IconPath } from '../../../lib/staticPathData';
 
 const Navbar = styled.nav`
   width: 100%;
