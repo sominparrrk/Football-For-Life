@@ -1,5 +1,5 @@
 import Header from './components/common/Header/Header';
-import GlobalStyle from './styles/GlobalStyle.js';
+import GlobalStyle from './styles/GlobalStyle';
 
 function App() {
   return (
