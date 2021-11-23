@@ -55,7 +55,7 @@ const SerachIcon = styled.img.attrs({
   padding-left: 0.5rem;
 `;
 
-const MenuNavbar = () => {
+const MenuNavBar = () => {
   return (
     <>
       <Navbar>
@@ -93,4 +93,4 @@ const MenuNavbar = () => {
   );
 };
 
-export default MenuNavbar;
+export default MenuNavBar;

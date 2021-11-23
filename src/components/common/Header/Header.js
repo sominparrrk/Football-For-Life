@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { LogoPath } from '../../../lib/staticPathData';
-import ClubNavbar from './ClubNavbar';
-import MenuNavbar from './MenuNavbar';
+import FavClubBar from './FavClubBar';
+import MenuNavBar from './MenuNavBar';
 
 const MenuWrapper = styled.div`
   display: flex;
@@ -17,10 +17,10 @@ const Logo = styled.img`
 const Header = () => {
   return (
     <>
-      <ClubNavbar />
+      <FavClubBar />
       <MenuWrapper>
         <Logo src={LogoPath.logo} alt='logo' />
-        <MenuNavbar />
+        <MenuNavBar />
       </MenuWrapper>
     </>
   );
