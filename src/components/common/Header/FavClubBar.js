@@ -46,8 +46,8 @@ const FavClubBar = () => {
         <ContentWrapper>
           <Title>FAVOURITE CLUB SITES</Title>
           <RedirectIcon />
-          {ClubPath.map((club) => (
-            <a href={club.link} target='_blank'>
+          {ClubPath.map((club, index) => (
+            <a key={index} href={club.link} target='_blank'>
               <ClubImg src={club.img} />
             </a>
           ))}

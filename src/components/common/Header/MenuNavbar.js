@@ -13,7 +13,7 @@ const Navbar = styled.nav`
 
 const MenuList = styled.ul`
   display: flex;
-  margin: 0;
+  margin-left: 10rem;
   color: #ffffff;
   font-weight: 500;
 `;

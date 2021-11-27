@@ -1,27 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
 import { LogoPath } from '../../../lib/staticPathData';
+import ClubNavBar from './ClubNavBar';
 import FavClubBar from './FavClubBar';
 import MenuNavBar from './MenuNavBar';
 
-const MenuWrapper = styled.div`
+const Container = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 const Logo = styled.img`
-  width: 10rem;
-  height: 10rem;
+  position: absolute;
+  left: -2rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 200px;
 `;
 
 const Header = () => {
   return (
     <>
+      <Logo src={LogoPath.logo} alt='logo' />
       <FavClubBar />
-      <MenuWrapper>
-        <Logo src={LogoPath.logo} alt='logo' />
+      <Container>
         <MenuNavBar />
-      </MenuWrapper>
+        <ClubNavBar />
+      </Container>
     </>
   );
 };
