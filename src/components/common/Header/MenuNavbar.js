@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { IconPath } from '../../../lib/staticPathData';
+import React from "react";
+import styled from "styled-components";
+import { IconPath } from "../../../lib/staticPathData";
 
 const Navbar = styled.nav`
   display: flex;
@@ -8,13 +8,13 @@ const Navbar = styled.nav`
   justify-content: space-between;
   width: 100%;
   height: 5rem;
-  background-color: #242424;
+  background-color: ${(props) => props.theme.black};
 `;
 
 const MenuList = styled.ul`
   display: flex;
   margin-left: 10rem;
-  color: #ffffff;
+  color: ${(props) => props.theme.white};
   font-weight: 500;
 `;
 
@@ -42,9 +42,9 @@ const SearchInput = styled.input`
   height: 2rem;
   border-radius: 1.25rem;
   padding-left: 1rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   &:valid {
-    color: #242424;
+    color: ${(props) => props.theme.black};
     font-style: italic;
   }
 `;
@@ -85,7 +85,7 @@ const MenuNavBar = () => {
         </MenuList>
 
         <SearchWrapper>
-          <SearchInput placeholder='Search Your Club' required='required' />
+          <SearchInput placeholder="Search Your Club" required="required" />
           <SerachIcon />
         </SearchWrapper>
       </Navbar>

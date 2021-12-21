@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { ClubPath, IconPath } from '../../../lib/staticPathData';
+import React from "react";
+import styled from "styled-components";
+import { ClubPath, IconPath } from "../../../lib/staticPathData";
 
 const Navbar = styled.nav`
   display: flex;
   align-items: center;
   width: 100%;
   height: 4rem;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.white};
 `;
 
 const ContentWrapper = styled.div`
@@ -18,7 +18,7 @@ const ContentWrapper = styled.div`
 
 const Title = styled.h4`
   margin: 0;
-  color: #76766f;
+  color: ${(props) => props.theme.gray};
   font-weight: 400;
   font-size: 0.75rem;
 `;
@@ -47,7 +47,7 @@ const FavClubBar = () => {
           <Title>FAVOURITE CLUB SITES</Title>
           <RedirectIcon />
           {ClubPath.map((club, index) => (
-            <a key={index} href={club.link} target='_blank'>
+            <a key={index} href={club.link} target="_blank">
               <ClubImg src={club.img} />
             </a>
           ))}
