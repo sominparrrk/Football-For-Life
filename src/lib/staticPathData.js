@@ -6,6 +6,7 @@ export const IconPath = {
   search: '/img/icons/search.svg',
   triangleDown: '/img/icons/triangle_down.svg',
   redirect: '/img/icons/redirect.svg',
+  modalClose: '/img/icons/modal_close.svg',
 };
 
 export const ClubPath = [
