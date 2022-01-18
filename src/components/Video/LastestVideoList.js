@@ -4,12 +4,11 @@ import getLatestVideo from '../../lib/api/video';
 import LatestVideoItem from './LatestVideoItem';
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  row-gap: 10px;
-  column-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  column-gap: 2rem;
 `;
 
 const LastestVideoList = () => {

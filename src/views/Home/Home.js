@@ -4,19 +4,20 @@ import LatestNewsList from '../../components/News/LatestNewsList';
 import LastestVideoList from '../../components/Video/LastestVideoList';
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 43px 105px 43px 105px;
+  padding: 2.5rem 6.5rem 2.5rem 6.5rem;
   background-color: ${(props) => props.theme.mainLight};
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  margin: 1.5rem 0 3.75rem 0;
+`;
 
 const Home = () => {
   return (
     <Container>
       <Title>Latest Highlights</Title>
       <LastestVideoList />
+      <Title>Latest News</Title>
       <LatestNewsList />
     </Container>
   );

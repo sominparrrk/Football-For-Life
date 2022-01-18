@@ -10,8 +10,8 @@ const Title = styled.h3`
 `;
 
 const Thumbnail = styled.img`
-  width: 333px;
-  height: 186px;
+  width: 100%;
+  height: 60%;
   object-fit: cover;
 `;
 
