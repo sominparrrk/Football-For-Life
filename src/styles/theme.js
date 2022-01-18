@@ -1,7 +1,9 @@
 const size = {
   mobile: '375px',
   tablet: '768px',
+  tabletLg: '900px',
   laptop: '1024px',
+  laptopLg: '1142px',
   desktop: '1280px',
 };
 
@@ -16,7 +18,9 @@ const theme = {
   // breakpoint
   mobile: `(max-width: ${size.mobile})`,
   tablet: `(max-width: ${size.tablet})`,
+  tabletLg: `(max-width: ${size.tabletLg})`,
   laptop: `(max-width: ${size.laptop})`,
+  laptopLg: `(max-width: ${size.laptopLg})`,
   desktop: `(max-width: ${size.desktop})`,
 };
 

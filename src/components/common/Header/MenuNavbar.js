@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { IconPath } from "../../../lib/staticPathData";
+import React from 'react';
+import styled from 'styled-components';
+import { IconPath } from '../../../lib/staticPathData';
 
 const Navbar = styled.nav`
   display: flex;
@@ -16,6 +16,15 @@ const MenuList = styled.ul`
   margin-left: 10rem;
   color: ${(props) => props.theme.white};
   font-weight: 500;
+
+  @media ${(props) => props.theme.desktop} {
+    font-size: 0.875rem;
+  }
+
+  @media ${(props) => props.theme.laptopLg} {
+    padding-left: 1rem;
+    font-size: 0.75rem;
+  }
 `;
 
 const MenuItem = styled.li`
@@ -23,6 +32,14 @@ const MenuItem = styled.li`
   align-items: center;
   margin: 1rem;
   cursor: pointer;
+
+  @media ${(props) => props.theme.desktop} {
+    margin: 0.75rem;
+  }
+
+  @media ${(props) => props.theme.laptopLg} {
+    // margin: 1rem 0 1rem 10rem;
+  }
 `;
 
 const TriDownIcon = styled.img.attrs({
@@ -42,10 +59,13 @@ const SearchInput = styled.input`
   height: 2rem;
   border-radius: 1.25rem;
   padding-left: 1rem;
-  font-family: "Outfit", sans-serif;
+  font-family: 'Outfit', sans-serif;
   &:valid {
     color: ${(props) => props.theme.black};
     font-style: italic;
+  }
+  @media ${(props) => props.theme.laptopLg} {
+    width: 10rem;
   }
 `;
 

@@ -6,6 +6,8 @@ import FavClubBar from './FavClubBar';
 import MenuNavBar from './MenuNavBar';
 
 const Container = styled.div`
+  /* position: sticky;
+  top: 0; */
   display: flex;
   flex-direction: column;
 `;
@@ -21,7 +23,7 @@ const Logo = styled.img`
 const Header = () => {
   return (
     <>
-      <Logo src={LogoPath.logo} alt='logo' />
+      <Logo src={LogoPath.logo} alt="logo" />
       <FavClubBar />
       <Container>
         <MenuNavBar />

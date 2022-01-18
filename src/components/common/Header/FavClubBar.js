@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { ClubPath, IconPath } from "../../../lib/staticPathData";
+import React from 'react';
+import styled from 'styled-components';
+import { ClubPath, IconPath } from '../../../lib/staticPathData';
 
 const Navbar = styled.nav`
   display: flex;
@@ -14,6 +14,10 @@ const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   padding-left: 13.5rem;
+
+  @media ${(props) => props.theme.laptopLg} {
+    padding-left: 11.5rem;
+  }
 `;
 
 const Title = styled.h4`
@@ -36,6 +40,12 @@ const ClubImg = styled.img`
   transition: all 0.2s linear;
   &:hover {
     transform: scale(1.4);
+  }
+
+  @media ${(props) => props.theme.desktop} {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0.5rem;
   }
 `;
 
