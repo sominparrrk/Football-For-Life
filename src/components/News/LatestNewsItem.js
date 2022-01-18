@@ -10,9 +10,9 @@ const Title = styled.h3`
 `;
 
 const Thumbnail = styled.img`
-  width: 569px;
-  height: 297px;
-  object-fit: cover;
+  width: 100%;
+  height: 70%;
+  object-fit: fill;
 `;
 
 const Description = styled.p`
@@ -20,7 +20,7 @@ const Description = styled.p`
 `;
 
 const LatestNewsItem = ({ news }) => {
-  const { title, url, urlToImage, description } = news;
+  const { title, urlToImage, description } = news;
   return (
     <Container>
       <Thumbnail src={urlToImage} />
