@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Navbar = styled.nav`
@@ -62,7 +63,11 @@ const ClubNavBar = () => {
           {clubDummyData
             .filter((club, index) => index < 12)
             .map((club) => (
-              <ClubItem key={club.code}>{club.name}</ClubItem>
+              <ClubItem key={club.code}>
+                <Link to={`/club/${club.name.replace(/ /gi, '-')}`}>
+                  {club.name}
+                </Link>
+              </ClubItem>
             ))}
         </ClubList>
       </Navbar>
