@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ClubInfo from './components/Club/ClubInfo';
+import ClubInfo from './views/Club/ClubInfo';
 import Header from './components/common/Header/Header';
 import Home from './views/Home/Home';
 
