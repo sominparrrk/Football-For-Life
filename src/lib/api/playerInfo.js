@@ -13,9 +13,10 @@ const getPlayerInfo = (id) => {
 
   try {
     const data = axios.request(options).then((response) => {
-      return response;
+      return response.data.response;
     });
-    console.log(data);
+    console.log('sdfsdfsdfsdfsd', data);
+    return data;
   } catch (err) {
     console.log('[FAIL] getClubs', err);
   }
