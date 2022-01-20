@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import ClubItem from '../../components/Club/ClubItem';
 
-const ClubInfo = ({ club }) => {
+const Club = () => {
   const { code } = useParams();
 
   return (
@@ -12,4 +12,4 @@ const ClubInfo = ({ club }) => {
   );
 };
 
-export default ClubInfo;
+export default Club;
