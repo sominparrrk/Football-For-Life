@@ -1,5 +1,6 @@
 const size = {
   mobile: '375px',
+  mobileLg: '425px',
   tablet: '768px',
   tabletLg: '900px',
   laptop: '1024px',
@@ -18,6 +19,7 @@ const theme = {
 
   // breakpoint
   mobile: `(max-width: ${size.mobile})`,
+  mobileLg: `(max-width: ${size.mobileLg})`,
   tablet: `(max-width: ${size.tablet})`,
   tabletLg: `(max-width: ${size.tabletLg})`,
   laptop: `(max-width: ${size.laptop})`,
