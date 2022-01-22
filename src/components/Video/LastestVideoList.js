@@ -9,6 +9,14 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   row-gap: 1rem;
   column-gap: 2rem;
+
+  @media ${(props) => props.theme.laptop} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${(props) => props.theme.mobileLg} {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const LastestVideoList = () => {

@@ -9,6 +9,11 @@ const Container = styled.div`
   grid-template-columns: repeat(2, minmax(0, 1fr));
   row-gap: 5rem;
   column-gap: 2rem;
+
+  @media ${(props) => props.theme.tablet} {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10rem;
+  }
 `;
 
 const LatestNewsList = () => {
