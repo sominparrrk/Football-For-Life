@@ -4,7 +4,6 @@ import getClubInfo from '../../lib/api/clubInfo';
 import Players from './Players';
 
 const Container = styled.div`
-  width: 100%;
   height: 100%;
   padding: 1.75rem 0 1.75rem 9rem;
   display: flex;
@@ -30,9 +29,7 @@ const Address = styled.p`
   margin: 0;
 `;
 
-const StadiumImg = styled.img`
-  //
-`;
+const StadiumImg = styled.img``;
 
 const ClubItem = ({ currentClub }) => {
   const [club, setClub] = useState([]);
