@@ -9,6 +9,18 @@ const Container = styled.div`
   row-gap: 2rem;
   column-gap: 2rem;
   padding: 3rem;
+
+  @media ${(props) => props.theme.laptop} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media ${(props) => props.theme.tabletLg} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${(props) => props.theme.tablet} {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const Players = ({ id }) => {
