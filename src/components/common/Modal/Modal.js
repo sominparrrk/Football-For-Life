@@ -3,17 +3,16 @@ import styled from 'styled-components';
 import { IconPath } from '../../../lib/staticPathData';
 
 const Container = styled.div`
-  position: absolute;
+  position: fixed;
   background-color: white;
   border-radius: 1.25rem;
-
-  // temp location and size (not considering scroll)
-  top: 60vh;
+  top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
   width: 711px;
   height: 475px;
   padding: 2rem;
+  z-index: 50;
 `;
 
 const Title = styled.h3`

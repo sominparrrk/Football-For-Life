@@ -6,6 +6,18 @@ const Container = styled.div`
   cursor: pointer;
 `;
 
+const DarkBg = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+`;
+
 const Title = styled.h3`
   //
 `;
@@ -28,7 +40,11 @@ const LatestVideoItem = ({ video }) => {
 
   return (
     <Container onClick={handleClick}>
-      {isVideoClicked && <Modal title={title} embed={embed} />}
+      {isVideoClicked && (
+        <DarkBg>
+          <Modal title={title} embed={embed} />
+        </DarkBg>
+      )}
       <Thumbnail src={thumbnail} />
       <Title>{title}</Title>
     </Container>
