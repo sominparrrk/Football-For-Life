@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { IconPath } from '../../../lib/staticPathData';
 
@@ -36,6 +36,19 @@ const CloseIcon = styled.img.attrs({
 `;
 
 const Modal = ({ title, embed }) => {
+  useEffect(() => {
+    document.body.style.cssText = `
+      position: fixed;
+      top: -${window.scrollY}px;
+      overflow-y: scroll;
+      width: 100%;
+    `;
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = '';
+      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+    };
+  }, []);
   const videoURL = embed.slice(
     embed.indexOf('https'),
     embed.lastIndexOf(`' frameborder`)
