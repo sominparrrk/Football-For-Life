@@ -1,5 +1,6 @@
 export const LogoPath = {
   logo: '/img/logo.png',
+  logoMobile: '/img/logo_mobile.png',
 };
 
 export const IconPath = {
@@ -7,6 +8,7 @@ export const IconPath = {
   triangleDown: '/img/icons/triangle_down.svg',
   redirect: '/img/icons/redirect.svg',
   modalClose: '/img/icons/modal_close.svg',
+  hamburgerMenu: '/img/icons/hamburger_menu.svg',
 };
 
 export const ClubPath = [

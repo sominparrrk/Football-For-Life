@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IconPath } from '../../../lib/staticPathData';
 
@@ -9,6 +9,21 @@ const Navbar = styled.nav`
   width: 100%;
   height: 5rem;
   background-color: ${(props) => props.theme.black};
+`;
+
+const HamburgerMenuIcon = styled.img.attrs({
+  src: IconPath.hamburgerMenu,
+})`
+  display: none;
+
+  @media ${(props) => props.theme.laptop} {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
 `;
 
 const MenuList = styled.ul`
@@ -25,6 +40,20 @@ const MenuList = styled.ul`
     padding-left: 1rem;
     font-size: 0.75rem;
   }
+
+  @media ${(props) => props.theme.laptop} {
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    background-color: ${(props) => props.theme.black};
+    margin: 0;
+    padding: 0 2rem;
+    font-size: 2rem;
+    display: ${({ isOpened }) => {
+      return isOpened === false ? 'none' : 'block';
+    }};
+  }
 `;
 
 const MenuItem = styled.li`
@@ -40,18 +69,30 @@ const MenuItem = styled.li`
   @media ${(props) => props.theme.laptopLg} {
     // margin: 1rem 0 1rem 10rem;
   }
+
+  @media ${(props) => props.theme.laptop} {
+    margin: 2rem 0;
+  }
 `;
 
 const TriDownIcon = styled.img.attrs({
   src: IconPath.triangleDown,
 })`
   padding-left: 0.5rem;
+
+  @media ${(props) => props.theme.laptop} {
+    display: none;
+  }
 `;
 
 const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-right: 2.5rem;
+
+  @media ${(props) => props.theme.laptop} {
+    display: none;
+  }
 `;
 
 const SearchInput = styled.input`
@@ -64,6 +105,7 @@ const SearchInput = styled.input`
     color: ${(props) => props.theme.black};
     font-style: italic;
   }
+
   @media ${(props) => props.theme.laptopLg} {
     width: 10rem;
   }
@@ -76,10 +118,16 @@ const SerachIcon = styled.img.attrs({
 `;
 
 const MenuNavBar = () => {
+  const [isOpened, setIsOpened] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpened(!isOpened);
+  };
+
   return (
     <>
       <Navbar>
-        <MenuList>
+        <MenuList isOpened={isOpened}>
           <MenuItem>
             Premier League
             <TriDownIcon />
@@ -108,6 +156,8 @@ const MenuNavBar = () => {
           <SearchInput placeholder="Search Your Club" required="required" />
           <SerachIcon />
         </SearchWrapper>
+
+        <HamburgerMenuIcon onClick={handleOpen} />
       </Navbar>
     </>
   );

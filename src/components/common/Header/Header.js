@@ -12,18 +12,44 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Logo = styled.img`
+const Logo = styled.img.attrs({
+  src: LogoPath.logo,
+})`
   position: absolute;
-  left: -2rem;
+  left: -2.5rem;
   width: 12rem;
   height: 12rem;
-  border-radius: 200px;
+  border-radius: 50%;
+
+  @media ${(props) => props.theme.laptop} {
+    display: none;
+  }
+`;
+
+const LogoMobile = styled.img.attrs({
+  src: LogoPath.logoMobile,
+})`
+  display: none;
+  position: absolute;
+  left: -2.5rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+
+  @media ${(props) => props.theme.laptop} {
+    display: block;
+    top: 1rem;
+    left: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
 `;
 
 const Header = () => {
   return (
     <>
-      <Logo src={LogoPath.logo} alt="logo" />
+      <Logo alt="logo" />
+      <LogoMobile alt="logo" />
       <FavClubBar />
       <Container>
         <MenuNavBar />

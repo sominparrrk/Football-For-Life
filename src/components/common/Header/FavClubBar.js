@@ -8,6 +8,10 @@ const Navbar = styled.nav`
   width: 100%;
   height: 4rem;
   background-color: ${(props) => props.theme.white};
+
+  @media ${(props) => props.theme.laptop} {
+    display: none;
+  }
 `;
 
 const ContentWrapper = styled.div`
