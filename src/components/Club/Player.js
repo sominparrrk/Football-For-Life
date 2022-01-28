@@ -8,8 +8,9 @@ const Container = styled.div`
 
 const Header = styled.header`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 2rem;
 `;
 
 const PlayerImage = styled.img`
@@ -31,16 +32,16 @@ const InfoList = styled.ul`
 
 const InfoItem = styled.li`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 1px solid ${(props) => props.theme.white};
 `;
 
 const InfoKey = styled.p`
-  justify-self: start;
+  margin-left: 2rem;
 `;
 
 const InfoValue = styled.p`
-  //
+  margin-right: 2rem;
 `;
 const Player = ({ player }) => {
   const { firstname, lastname, nationality, photo } = player.player;
