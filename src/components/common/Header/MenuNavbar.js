@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { IconPath } from '../../../lib/staticPathData';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { IconPath } from "../../../lib/staticPathData";
 
 const Navbar = styled.nav`
   display: flex;
@@ -51,7 +51,7 @@ const MenuList = styled.ul`
     padding: 0 2rem;
     font-size: 2rem;
     display: ${({ isOpened }) => {
-      return isOpened === false ? 'none' : 'block';
+      return isOpened === false ? "none" : "block";
     }};
   }
 `;
@@ -100,7 +100,7 @@ const SearchInput = styled.input`
   height: 2rem;
   border-radius: 1.25rem;
   padding-left: 1rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   &:valid {
     color: ${(props) => props.theme.black};
     font-style: italic;
