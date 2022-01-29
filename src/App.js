@@ -1,7 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Club from './views/Club/Club';
-import Header from './components/common/Header/Header';
-import Home from './views/Home/Home';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Club from "./views/Club";
+import Header from "./components/common/Header";
+import Home from "./views/Home";
 
 function App() {
   return (
