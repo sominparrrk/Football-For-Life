@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { LogoPath } from '../../../lib/staticPathData';
 import ClubNavBar from './ClubNavBar';
@@ -48,8 +49,12 @@ const LogoMobile = styled.img.attrs({
 const Header = () => {
   return (
     <>
-      <Logo alt="logo" />
-      <LogoMobile alt="logo" />
+      <Link to='/'>
+        <Logo alt='logo' />
+      </Link>
+      <Link to='/'>
+        <LogoMobile alt='logo' />
+      </Link>
       <FavClubBar />
       <Container>
         <MenuNavBar />
