@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import getClubs from "../../../lib/api/clubs";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import getClubs from '../../../lib/api/clubs';
 
 const Navbar = styled.nav`
   width: 100%;
@@ -46,7 +46,7 @@ const ClubNavBar = () => {
             .filter((club, index) => index < 12)
             .map((club) => (
               <ClubItem key={club.team.id}>
-                <Link to={`/club/${club.team.name.replace(/ /gi, "-")}`}>
+                <Link to={`/club/${club.team.name.replace(/ /gi, '-')}`}>
                   {club.team.name}
                 </Link>
               </ClubItem>
