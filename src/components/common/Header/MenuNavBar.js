@@ -53,6 +53,7 @@ const MenuList = styled.ul`
     display: ${({ isOpened }) => {
       return isOpened === false ? 'none' : 'block';
     }};
+    z-index: 100;
   }
 `;
 
