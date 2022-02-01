@@ -12,11 +12,20 @@ const Container = styled.div`
   width: 711px;
   height: 475px;
   padding: 2rem;
-  z-index: 50;
+  z-index: 100;
+
+  @media ${(props) => props.theme.laptop} {
+    left: 50%;
+    width: calc(100% - 10rem);
+  }
 `;
 
 const Title = styled.h3`
   margin-top: 1rem;
+
+  @media ${(props) => props.theme.mobileLg} {
+    font-size: 0.75rem;
+  }
 `;
 
 const VideoWrapper = styled.div`
@@ -25,6 +34,15 @@ const VideoWrapper = styled.div`
 
 const VideoDisplay = styled.div`
   //
+`;
+
+const VideoIFrame = styled.iframe`
+  width: 711px;
+  height: 400px;
+
+  @media ${(props) => props.theme.laptop} {
+    width: 100%;
+  }
 `;
 
 const CloseIcon = styled.img.attrs({
@@ -58,17 +76,7 @@ const Modal = ({ title, embed }) => {
       <CloseIcon />
       <VideoWrapper>
         <VideoDisplay>
-          <iframe
-            src={videoURL}
-            style={{
-              width: '711px',
-              height: '400px',
-            }}
-            frameBorder="0"
-            width="100%"
-            height="100%"
-            allow="autoplay; fullscreen"
-          ></iframe>
+          <VideoIFrame src={videoURL} />
         </VideoDisplay>
         <Title>{title}</Title>
       </VideoWrapper>
